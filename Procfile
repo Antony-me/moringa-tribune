@@ -1,1 +1,1 @@
-web: gunicorn manage:app
+web: gunicorn The-Moringa-Tribune.wsgi --log-file -
