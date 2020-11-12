@@ -31,7 +31,7 @@ SECRET_KEY = '2v4b*(61htkv-+9w)m1jxjw=w&+u6u7_jrds%o^36r+lxfhp%e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['moringa-tribune.herokuapp.com']
 
 
 # Application definition
