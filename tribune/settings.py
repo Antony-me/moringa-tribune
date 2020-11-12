@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import django_heroku
 
 import cloudinary
 import cloudinary.uploader
@@ -148,3 +149,6 @@ cloudinary.config(
   api_key = "517714219614197", 
   api_secret = "RxTgjb9mL9Wghh3mCPklvlyCoyM" 
 )
+
+
+django_heroku.settings(locals())
