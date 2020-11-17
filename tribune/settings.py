@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['moringa-tribune.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
+    'registration',
     'cloudinary',
     'bootstrap3',
     'news.apps.NewsConfig',

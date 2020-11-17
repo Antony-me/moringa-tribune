@@ -6,6 +6,7 @@ from .forms import NewsLetterForm
 from django.http import HttpResponse, Http404,HttpResponseRedirect
 from .email import send_welcome_email
 from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def news_today(request):
@@ -66,3 +67,8 @@ def article(request,article_id):
 
         raise Http404()
     return render(request,"all-news/article.html", {"article":article})
+
+
+@login_required(login_url='/accounts/login/')
+def article(request, article_id):
+    pass
