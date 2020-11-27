@@ -1,4 +1,4 @@
-#!/home/moringa/Documents/Moringa-Projects/CORE-PYTHON/Django/The-Moringa-Tribune/virtual/bin/python3.8
+#!/home/moringa/Documents/Moringa-Projects/CORE-PYTHON/Django/Tribune/virtual/bin/python3
 #
 # The Python Imaging Library.
 # $Id$

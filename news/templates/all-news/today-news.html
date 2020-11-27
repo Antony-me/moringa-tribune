@@ -3,6 +3,7 @@
 {% load cloudinary %}
 {% block content %} 
 {{ block.super}}
+{% load static %}
 
 <div class="container">
 
@@ -12,12 +13,13 @@
   <div class="row">
     <!-- displaying News articles -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-      <h2> {{ news_item.title }} </h2>
-      <p>{{ news_item.post }}</p>
+      <h2> {{ news_item.title }} </h2> 
+      
+      <!-- {{ news_item.post }} -->
       
     <!--Display news Article images  -->
     <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <img src="{{news_item.article_image.url}}" class="img-responsive" alt="Image">
+        <img src="{{news_item.article_image.url}}" class="img-responsive" alt="Image"> <br> <br>
       </div>
     </div>
 
@@ -42,4 +44,8 @@
   </form>
 
 </div>
+
+{% block scripts %} {{block.super}}
+  <script type="text/javascript" src="{%static 'js/newsletter.js'%}"></script>
+{% endblock %}
 {% endblock %}

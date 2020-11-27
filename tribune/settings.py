@@ -38,7 +38,9 @@ ALLOWED_HOSTS = ['moringa-tribune.herokuapp.com']
 # Application definition
 
 INSTALLED_APPS = [
-    'registration',
+    'rest_framework',
+    'rest_framework.authtoken',
+    'tinymce',
     'cloudinary',
     'bootstrap3',
     'news.apps.NewsConfig',
@@ -48,7 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
